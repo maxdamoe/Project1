@@ -7,4 +7,4 @@ Team: Jon Simpson: HTML CSS
       Thandi Kapakasa: HTML CSS
       Baiyang Qi: Mockup, JS / CSS support
       Dogrul Hikmet: Google API
-      Kyle Ahn: IMDB API
+      Kyle Ahn: OMDb API
