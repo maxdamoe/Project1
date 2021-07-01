@@ -8,3 +8,6 @@ Team: Jon Simpson: HTML CSS
       Baiyang Qi: Mockup, JS / CSS support
       Dogrul Hikmet: Google API
       Kyle Ahn: OMDb API
+   
+Tools: Bootstrap, Bulma, Google books API, and OMBD API. 
+ 
