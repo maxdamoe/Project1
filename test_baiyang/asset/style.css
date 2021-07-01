@@ -1,0 +1,91 @@
+body{
+    height:100%
+}
+
+header {
+    background-image: url("../image/Header.jpg");
+    background-size: 100% 100%;
+    height: 100px;
+    width: 100%;
+    background-repeat: no-repeat;
+    background-position: center;
+    padding-top:2%;
+}
+
+
+#title {
+    color: white;
+    font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    margin-left:10%;
+    font-size:42pt;
+}
+
+
+#foot{
+    background-color: gray;
+    text-align: center;
+    height: 10%;
+    width: 100%;
+    padding-top:2%;
+    padding-bottom: 2%;
+}
+
+#mainbody{
+    display: flex;
+    flex-direction: row;
+}
+
+.left {
+    background-image: url(../image/Library.jpg);
+    background-size: 100% 100%;
+    height:800px;
+    width:50%;
+    background-repeat: no-repeat;
+    border-style: solid;
+}
+
+.right {
+    background-image: url(../image/Cinema.jpg);
+    background-size: 100% 100%;
+    height:800px;
+    width:50%;
+    background-repeat: no-repeat;
+    border-style: solid;
+}
+
+.senr{
+    color:white;
+    font-size:38pt;
+    text-align: left;
+    font-weight: bold;
+    font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    margin-top: 50px;
+}
+
+.senl{
+    color:white;
+    font-size:38pt;
+    text-align: right;
+    font-weight: bold;
+    font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    margin-top: 50px;
+    white-space: pre;
+}
+.senr2{
+    color:white;
+    font-size:38pt;
+    text-align: left;
+    font-weight: bold;
+    font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    margin-top: 50px;
+}
+
+.senl2{
+    color:white;
+    font-size:38pt;
+    text-align: right;
+    font-weight: bold;
+    font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    margin-top: 50px;
+    white-space: pre;
+}
