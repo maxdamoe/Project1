@@ -1,0 +1,41 @@
+#topImage {
+    background-image: url(../../image/Header.jpg);
+    height:300px;
+    width:1920px;
+    position:relative;
+    background-position: center;
+
+}
+
+#goodFinds{
+    color:white;
+    left:300px;
+    top:100px;
+    position:relative;
+}
+
+#leftImage {
+    background-image: url(../../image/Library.jpg);
+    width:960px;
+    position:relative;
+    height:600px;
+    background-position: center;
+    background-size:cover
+    
+}
+
+#rightImage {
+    background-image: url(../../image/Cinema.jpg);
+    height:600px;
+    background-position: center;
+    Background-size:cover;
+}
+
+.buttons {
+    width:100px;
+    height:50px;
+    position: relative;
+    left:50%;
+    top:30%;
+
+}
