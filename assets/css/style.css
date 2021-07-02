@@ -39,3 +39,15 @@
     top:30%;
 
 }
+
+.searchDiv {
+    position: relative;
+    top: 100px;
+    width: 100px;
+    left:37%;
+    top:42%;
+}
+
+.searchText{
+    text-align: center;
+}
