@@ -1,0 +1,24 @@
+#bookPicture.col-3 {
+    position: relative;
+    width: 200px;
+    height:400px;
+    background-color: yellow;
+}
+
+#bookSummary {
+    position: relative;
+    width:600px;
+    height:400px;
+    background-color: teal;
+
+}
+
+
+#bookInformation {
+    position: relative;
+    width:200px;
+    height:300px;
+    background-color:red;
+
+}
+
