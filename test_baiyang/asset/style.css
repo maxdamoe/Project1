@@ -59,7 +59,7 @@ header {
     text-align: left;
     font-weight: bold;
     font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
-    margin-top: 50px;
+    margin-top: 100px;
 }
 
 .senl{
@@ -68,7 +68,7 @@ header {
     text-align: right;
     font-weight: bold;
     font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
-    margin-top: 50px;
+    margin-top: 100px;
     white-space: pre;
 }
 .senr2{
@@ -88,4 +88,27 @@ header {
     font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
     margin-top: 50px;
     white-space: pre;
+}
+
+#booksearch {
+    display: flex;
+    flex-direction: row;
+    margin-left: 40%;
+    margin-top: 100px;
+}
+
+#moviesearch {
+    display: flex;
+    flex-direction: row;
+    margin-left: 30%;
+    margin-top: 100px;
+}
+
+.inputarea {
+    line-height: 40px;
+    font-size: 20pt;
+}
+
+.btn {
+    font-size: 20pt;
 }
