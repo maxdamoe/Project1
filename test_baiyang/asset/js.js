@@ -1,5 +1,6 @@
 // setup homepage
 var mainEl = $("#mainbody")
+var key = "AIzaSyC6kZC2G9aem-wjUxEi4zdIngmHQz8Pq3E";
 console.log(mainEl)
 homepage()
 function homepage(){
@@ -70,6 +71,91 @@ function homepage(){
     bookbtn.on("click",function(event){
         event.preventDefault();
         init();
+        var book = bookinput.val();
+        booklist(book);
+        // bookSc(book);
+    })
+}
+
+function bookSc(book,index){
+    fetch("https://www.googleapis.com/books/v1/volumes?q=" + book +"+intitle:"+book+"&key=" + key)
+    .then(function(response){
+        return response.json();
+    })
+    .then(function(response){
+       var book1info = response.items[index].volumeInfo;
+       var book1img = book1info.imageLinks.thumbnail;
+       var author = book1info.authors;
+       var description = book1info.description;
+       
+       var bkleft = $("<div>");
+       var bkright = $("<div>");
+       var bkimg = $("<img>");
+       var bkauthor = $("<p>");
+       var bkhead = $("<h2>");
+       var bkdescrip = $("<p>");
+       var homebtn = $("<button>");
+       bkleft.attr("class","page2l");
+       bkleft.attr("id","bkleft");
+       bkright.attr("class","page2r");
+       bkimg.attr("src",book1img);
+       bkimg.attr("style","height:600px;width:300px");
+       bkauthor.text("Authors: " + JSON.stringify(author));
+       bkauthor.attr("style","color:black");
+       bkhead.text("Description")
+       bkhead.text = "Description";
+       bkdescrip.text(description);
+       homebtn.text("Return");
+
+       mainEl.append(bkleft);
+       mainEl.append(bkright);
+       bkleft.append(bkimg);
+       bkleft.append(bkauthor);
+       bkright.append(bkhead);
+       bkright.append(bkdescrip);
+       bkright.append(homebtn)
+
+       homebtn.on("click",function(event){
+        event.preventDefault();
+        init();
+        homepage();
+       })
+
+
+
+    })
+
+}
+
+function booklist(book){
+    fetch("https://www.googleapis.com/books/v1/volumes?q=" + book +"+intitle:"+book+"&key=" + key)
+    .then(function(response){
+        return response.json();
+    })
+    .then(function(response){
+        var bookcontainer = $("<div>");
+        mainEl.append(bookcontainer);
+        bookcontainer.attr("id","bookcontainer");
+        var booklist = [];
+        var bookbox = [];
+        var bookimgs = [];
+        for (let i =0 ; i<=10; i++){
+            booklist[i] = response.items[i].volumeInfo.imageLinks.thumbnail;
+            bookimgs[i] = $("<img>");
+            bookimgs[i].attr("src",booklist[i]);
+            bookimgs[i].attr("style","height:300px ; width:auto")
+            bookbox[i] = $("<div>");
+            bookbox[i].attr("class","bookbox")
+            bookcontainer.append(bookbox[i]);
+            bookbox[i].append(bookimgs[i]);
+            bookimgs[i].on("click",function(event){
+                event.preventDefault();
+                init();
+                bookSc(book,i)
+
+            })
+            console.log(response.items)
+        }
     })
 
 }
@@ -78,3 +164,13 @@ function homepage(){
 function init(){
     mainEl.text("");
 }
+
+
+// var book = "linear"
+// fetch("https://www.googleapis.com/books/v1/volumes?q=" + book +"+intitle:"+book+"&key=" + key)
+// .then(function(response){
+//     return response.json();
+// }).then(function(response){
+//     console.log(response);
+//     console.log(response.items[0].volumeInfo)
+// })
