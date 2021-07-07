@@ -73,7 +73,13 @@ function homepage(){
         init();
         var book = bookinput.val();
         booklist(book);
-        // bookSc(book);
+    })
+
+    moviebtn.one("click",function(event){
+        event.preventDefault();
+        init();
+        var movie = movieinput.val();
+        movieSc(movie);
     })
 }
 
@@ -103,7 +109,6 @@ function bookSc(book,index){
        bkauthor.text("Authors: " + JSON.stringify(author));
        bkauthor.attr("style","color:black");
        bkhead.text("Description")
-       bkhead.text = "Description";
        bkdescrip.text(description);
        homebtn.text("Return");
 
@@ -166,11 +171,52 @@ function init(){
 }
 
 
-// var book = "linear"
-// fetch("https://www.googleapis.com/books/v1/volumes?q=" + book +"+intitle:"+book+"&key=" + key)
-// .then(function(response){
-//     return response.json();
-// }).then(function(response){
-//     console.log(response);
-//     console.log(response.items[0].volumeInfo)
-// })
+
+
+
+function movieSc(movie){
+    fetch("http://www.omdbapi.com/?apikey=557652bb&t="+ movie)
+.then(function(response){
+    return response.json()
+})
+.then(function(response){
+    var movieimg = response.Poster;
+    var movieactor = response.Actors;
+    var movieplot = response.Plot
+    
+    var mvleft = $("<div>");
+    var mvright = $("<div>");
+    var mvimg = $("<img>");
+    var mvactor = $("<p>");
+    var mvhead = $("<h2>");
+    var mvplot = $("<p>");
+    var homebtn = $("<button>");
+    mvleft.attr("class","page2l");
+    mvright.attr("class","page2r");
+    mvimg.attr("src",movieimg);
+    mvimg.attr("style","height:600px;width:300px");
+    mvactor.text("Actors: "+ JSON.stringify(movieactor));
+    mvhead.text("Introduction");
+    mvplot.text(movieplot);
+    homebtn.text("Return");
+
+    mainEl.append(mvleft);
+    mainEl.append(mvright);
+    mvleft.append(mvimg);
+    mvleft.append(mvactor);
+    mvright.append(mvhead);
+    mvright.append(mvplot);
+    mvright.append(homebtn);
+
+    homebtn.on("click",function(event){
+        event.preventDefault();
+        init();
+        homepage();
+       })
+
+})
+}
+
+
+
+
