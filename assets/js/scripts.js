@@ -1,8 +1,6 @@
 
 
-let moviesLink = window.location.href
 
-console.log(moviesLink)
 
 
 // Send the name of book that the user is looking for to the Books.html file. This is done when the user enters the book title, and then clicks the search button.
@@ -16,7 +14,11 @@ bookButton.addEventListener('click', () => storeBookName())
 function storeBookName() {
 
     localStorage.setItem('bookName', bookSearch.value);
-    return window.location.assign('./assets/Books.html');    
+
+
+    return window.location.assign("./assets/Books.html");    
+
+
 }
 
 
@@ -29,6 +31,10 @@ movieButton.addEventListener('click', () => storeMovieName())
 
 function storeMovieName() {
     localStorage.setItem('movieName', movieSearch.value);
+
+
+    console.log(movieSearch.value)
     return window.location.assign('./assets/Movies.html')
+
 }
 
