@@ -180,10 +180,12 @@ function movieSc(movie){
     return response.json()
 })
 .then(function(response){
+    console.log(response)
     var movieimg = response.Poster;
     var movieactor = response.Actors;
-    var movieplot = response.Plot
-    
+    var movieplot = response.Plot;
+    var movietitle = response.Title;
+
     var mvleft = $("<div>");
     var mvright = $("<div>");
     var mvimg = $("<img>");
@@ -194,9 +196,9 @@ function movieSc(movie){
     mvleft.attr("class","page2l");
     mvright.attr("class","page2r");
     mvimg.attr("src",movieimg);
-    mvimg.attr("style","height:600px;width:300px");
+    mvimg.attr("style","height:600px;width:100%");
     mvactor.text("Actors: "+ JSON.stringify(movieactor));
-    mvhead.text("Introduction");
+    mvhead.text(movietitle);
     mvplot.text(movieplot);
     homebtn.text("Return");
 

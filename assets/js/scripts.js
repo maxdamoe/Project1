@@ -16,7 +16,7 @@ bookButton.addEventListener('click', () => storeBookName())
 function storeBookName() {
 
     localStorage.setItem('bookName', bookSearch.value);
-    return window.location.assign('file:///C:/Users/maxsi/Desktop/Coding/Project1/assets/Books.html');    
+    return window.location.assign('./assets/Books.html');    
 }
 
 
@@ -29,6 +29,6 @@ movieButton.addEventListener('click', () => storeMovieName())
 
 function storeMovieName() {
     localStorage.setItem('movieName', movieSearch.value);
-    return window.location.assign('file:///C:/Users/maxsi/Desktop/Coding/Project1/Assets/Movies.html')
+    return window.location.assign('./assets/Movies.html')
 }
 
