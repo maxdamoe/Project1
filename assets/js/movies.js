@@ -6,28 +6,30 @@ console.log(movie)
 
 
 var movieData;
-console.log(movieData)
+
 
 function callAPI(){
     fetch('https://www.omdbapi.com/?t=' +movie+ '&apikey=702a6c7e')
     .then((response) => response.json())
     .then(function(data){ 
-        
-        document.getElementById('moviePicture').src = data.Poster
-        document.getElementById("movieInformation").innerText = data.Plot
-        movieData = data;
+        console.log(data)
+        document.getElementById('movietitle').innerText = data.Title;
+        document.getElementById('moviePicture').src = data.Poster;
+        document.getElementById("movieplot").innerText = data.Plot;
+        // movieData = data;
+        document.getElementById('movieGenre').innerText = "Genre: " + data.Genre;
+        document.getElementById('releasedtime').innerText = "Released Time: " + data.Released;
+        document.getElementById('movieInformation').innerText = "Metascore: " + data.Metascore;
+        document.getElementById('plothead').innerText = "Movie Plot :"
     })
 
 }
 
+callAPI()
 
 
 
-console.log(callAPI())
 
-
-
-var imgSRC = callAPI()
 
 
 
