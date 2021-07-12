@@ -112,3 +112,15 @@ header {
 .btn {
     font-size: 20pt;
 }
+
+#bookcontainer {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+
+.bookbox {
+    height:300px;
+    width: 20%;
+}

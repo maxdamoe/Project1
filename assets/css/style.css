@@ -11,9 +11,7 @@ body{
     background-size:cover;
 }
 
-.row {
-    width:auto;
-}
+
 
 #goodFinds{
     color:white;
@@ -57,7 +55,7 @@ body{
 .pb{
     color:white;
     font-size:38pt;
-    text-align: right;
+    text-align: center;
     font-weight: bold;
     font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
     margin-top: 90px;
@@ -89,23 +87,23 @@ body{
 .buttons {
     width:100px;
     height:50px;
-    position: absolute;
-    left:70%;
-    top:60%;
+    position:relative;
+    top:6.1%;
+    left: 60%;
 
 }
 
 .btn1 {
     width:100px;
-    height:50px;  
+    height:30px;  
 }
 
 .searchDiv {
-    position: absolute;
-    top: 60%;
-    /* top: 100px; */
-    width: 100px;
-    left:37%;
+    display: flex;
+    flex-direction: row;
+    position: relative;
+    left: 30%;
+    top: 10%;
 }
 
 .searchText{
@@ -121,3 +119,17 @@ body{
     padding-top:2%;
     padding-bottom: 2%;
 }
+
+input[type=text] {
+    width: auto;
+    height: 40px;
+    box-sizing: border-box;
+    border: 2px solid #ccc;
+    border-radius: 4px;
+    font-size: 16px;
+    background-color: white;
+    background-image: url('/image/search.png');
+    background-position: 10px 10px; 
+    background-repeat: no-repeat;
+    padding: 12px 20px 12px 40px;
+  }

@@ -10,6 +10,8 @@
         integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
     <link rel="stylesheet" href="../assets/css/style.css" />
     <link rel="stylesheet" href="../assets/css/Books.css" />
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+
 
 </head>
 <body>
@@ -18,11 +20,11 @@
 </div>
 
 
-
+<div id="main">
 <div class="row">
     <div class="col-3" id="bookglance">
         <div class="card" style="width: 100%;">
-            <img id="bookPicture" class="card-img-top" src="../image/booksample.jpg" >
+            <img id="bookPicture" class="card-img-top"  >
             <div class="card-body">
               <p id="bookInformation"class="card-text">book information</p>
             </div>
@@ -32,15 +34,13 @@
         <div id="summary" class="card" style="width:90%">
             <div  class="card-body">
                 <h5 class="card-title">Book Summary</h5>
-                <p class="card-text">A Feast for Crows is the fourth of seven planned novels in the epic fantasy series A Song of Ice and Fire by American author George R. R. Martin. The novel was first published on October 17, 2005, in the United Kingdom,[1] with a United States edition following on November 8, 2005.[2]
-
-                    In May 2005, Martin announced that the "sheer size" of his still-unfinished manuscript for A Feast for Crows had led him and his publishers to split the narrative into two books.[3] Rather than divide the text chronologically in half, Martin opted to instead split the material by plot location, resulting in "two novels taking place simultaneously" with different casts of characters.[3] A Feast for Crows was published months later, and focuses mainly on southern Westeros. The concurrent novel A Dance with Dragons, which focuses on other locations such as the North, the Wall and Essos, was teased to be published the following year, but was delayed and not released until six years later on July 12, 2011.[4] Martin also noted that the A Song of Ice and Fire series would now likely total seven novels.[3]
-                    
-                    A Feast for Crows was the first novel in the series to debut at number one on The New York Times Best Seller list,[5] a feat among fantasy writers only previously achieved by Robert Jordan[6][7][8][9][10] and Neil Gaiman.[11] In 2006 the novel was nominated for the Hugo Award, the Locus Award, and the British Fantasy Society Award.[12] It has since been adapted, along with A Dance With Dragons, for television as the fifth season of Game of Thrones, though elements of the novel appeared in the series' fourth and sixth seasons.</p>
+                <p id="booksum" class="card-text"></p>
             </div>
         </div>
         <a href="../index.html"><button class="buttons" id="homeButton">Home</button></a>
     </div>
+</div>
+
 </div>
 
 <footer id="foot">
@@ -57,5 +57,5 @@
 
 
 </body>
-
+    <script src="./js/books.js"></script>
 </html>

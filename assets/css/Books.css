@@ -1,4 +1,7 @@
-
+body{
+    overflow-x: hidden;
+    overflow-y: auto
+}
 
 #bookglance {
     width: auto;
@@ -25,9 +28,12 @@ margin-top:3%;
 margin-left: 5%;
 }
 
-
-
-
+#main{
+display: flex;
+flex-direction: row;
+overflow-x: hidden;
+overflow-y: auto
+}
 
 
 #bookPicture {
@@ -37,9 +43,79 @@ margin-left: 5%;
 
 
 
+#bookcontainer {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content:space-evenly;
+    position: relative;
+    width:100%;
+}
+
+.bookimg {
+    height: 400px;
+    width:auto;
+    transition: .5s ease;
+    backface-visibility: hidden;
+    opacity: 1;
+    display: block;
+}
+
+.middle {
+    transition: .5s ease;
+    opacity: 0;
+    position: relative;
+    top:30%;
+    right:50%;
+}
 
 
+.bookbox{
+    width:20%;
+    display: flex;
+    justify-content: space-around;
+}
 
+
+.bookbox:hover .bookimg{
+    opacity: 0.3;
+}
+
+.bookbox:hover .middle {
+    opacity: 1;
+}
+
+.booktitle {
+    background-color: #4CAF50;
+    color: white;
+    font-size: 16px;
+    padding: 8px 16px;
+  }
+
+
+.bkimgDiv {
+    margin:7%;
+}
+
+.bkauthorDiv {
+    margin-left:10%;
+}
+
+
+.page2r {
+    height:400px;
+    width: auto;
+    margin: 25px 40px 50px;
+    padding: 10px 15px 20px;
+
+}
+
+
+.homebtn{
+    position: relative;
+    left:80%;
+    width:100px;
+}
 /* #bookInformation {
     position: relative;
     width:200px;
