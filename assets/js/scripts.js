@@ -18,7 +18,12 @@ function storeBookName() {
     localStorage.setItem('bookName', bookSearch.value);
     return window.location.assign('./assets/Books.html');    
 }
-
+$('#bookSearch').on("keyup", function(e) {
+    if (e.keyCode == 13) {
+        console.log('Enter');
+        bookButton.click();
+    }
+});
 
 // Send the name of movie that the user is looking for to the Movies.html file. This is done when the user enters the book title, and then clicks the search button.
 
@@ -31,4 +36,10 @@ function storeMovieName() {
     localStorage.setItem('movieName', movieSearch.value);
     return window.location.assign('./assets/Movies.html')
 }
+$('#movieSearch').on("keyup", function(e) {
+    if (e.keyCode == 13) {
+        console.log('Enter');
+        movieButton.click();
+    }
+});
 
